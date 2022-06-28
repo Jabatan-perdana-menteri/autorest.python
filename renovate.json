@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>renovatebot/.github"],
+  "packageRules": [
+    {
+      "matchPackageNames": ["renovate"],
+      "automerge": true,
+      "separateMinorPatch": false,
+      "stabilityDays": 0
+    },
+    {
+      "description": "Do not pin package.json deps",
+      "matchFiles": ["package.json"],
+      "rangeStrategy": "replace"
+    }
+  ]
+}
